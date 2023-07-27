@@ -42,6 +42,10 @@ module.exports = {
             {
                 test: /\.html$/,
                 loader: 'html-loader'
+            },
+            {
+                test: /\.mp3$/,
+                type: 'asset/resource'
             }
         ]
     }
