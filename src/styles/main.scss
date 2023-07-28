@@ -1,5 +1,54 @@
 main {
+    display: grid;
+    grid-template: auto 1fr auto auto / 5fr 3fr;
+    
     margin: 0 0 0 30px;
+    padding: 30px;
     border-radius: 30px;
     background-color: #fff;
+}
+
+.main__header {
+    grid-column: 1 / -1;
+
+    display: grid;
+    grid-template: 1fr / 5fr 3fr;
+
+    .header__title {
+        font-size: 32px;
+        font-weight: 600;
+    }
+
+    .search-bar__wrap {
+        display: flex;
+        align-items: center; 
+        justify-content: end;
+        height: fit-content;
+        
+        .header__notification {
+            width: 20px;
+            margin: 0 20px;
+        }
+
+        .header__search-bar {
+            display: flex;
+            align-items: center;
+
+            .header__magnifying-glass {
+                width: 20px;
+                transform: translateX(32px);
+            }
+
+            input[type="text"] {
+                padding: 10px 20px 10px 40px;
+                border: 1px solid #dadada;
+                border-radius: 30px;
+
+                &::placeholder {
+                    color: #c4c4c4;
+                }
+            }
+        }
+    }
+
 }
