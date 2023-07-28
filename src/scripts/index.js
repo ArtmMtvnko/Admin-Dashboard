@@ -9,8 +9,8 @@ const wavesurfer = WaveSurfer.create({
     progressColor: '#ededed',
     url: urlAudio,
     height: 40,
-    barWidth: 5,
-    barRadius: 2
+    barWidth: 4,
+    barRadius: 2,
 })
 
 wavesurfer.on('interaction', () => {
@@ -25,8 +25,8 @@ playButton.addEventListener('click', () => {
     if (play) {
         wavesurfer.pause()
         play = false
-    } else {
-        wavesurfer.play()
-        play = true
+        return
     }
+    wavesurfer.play()
+    play = true
 })
