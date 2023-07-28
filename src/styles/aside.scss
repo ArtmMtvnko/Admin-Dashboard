@@ -1,6 +1,6 @@
 aside {
     display: grid;
-    grid-template: auto 1fr minmax(auto, 20%) / 1fr;
+    grid-template: auto 1fr minmax(auto, 30%) / 1fr;
     
     margin: 0 0 0 10px;
 }
@@ -57,6 +57,7 @@ aside {
     grid-template: auto 1fr / 1fr;
 
     .aside__audio-bar {
+        margin: 0 20px;
         padding: 0 20px;
         border-radius: 20px 20px 0 0;
         background-color: #5a5a5a39;
@@ -67,6 +68,92 @@ aside {
     }
 
     .aside__audio-player {
-        background-color: #a037f1;
+        display: grid;
+        grid-template: 2fr 1fr / 1fr;
+        
+        padding: 20px;
+        border-radius: 30px;
+        background-image: linear-gradient(-45deg, #982fe8, #cfa3f2);
+
+        .audio-player__title {
+            align-self: start;
+            
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+
+            img {
+                width: 60px;
+                border-radius: 20px;
+            }
+
+            p {
+                color: #fff;
+                font-weight: 700;
+                margin: 0 0 0 20px;
+            }
+        }
+
+        .audio-player__tools {
+            align-self: end;
+
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            color: #fff;
+
+            .tools__wrap {
+
+                display: flex;
+                justify-content: space-around;
+                align-items: center;
+
+                width: 60%;
+
+                i {
+                    font-size: 18px;
+    
+                    &:nth-child(1) {
+                        transform: rotate(180deg);
+                    }
+                }
+    
+                .tools__button {
+                    display: grid;
+                    place-items: center;
+
+                    background-color: #fff;
+                    border-radius: 50%;
+                    height: 40px;
+                    width: 40px;
+
+                    i {
+                        color: #982fe8;
+
+                        &:nth-child(1) {
+                            display: none;
+                        }
+                    }
+
+                    &.play {
+                        i {
+                            color: #982fe8;
+    
+                            &:nth-child(2) {
+                                display: none;
+                            }
+
+                            &:nth-child(1) {
+                                display: inline;
+                            }
+                        }
+                    }
+                }
+            }
+
+        }
+
+
     }
 }

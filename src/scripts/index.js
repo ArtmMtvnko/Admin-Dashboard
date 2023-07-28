@@ -16,3 +16,17 @@ const wavesurfer = WaveSurfer.create({
 wavesurfer.on('interaction', () => {
     wavesurfer.play()
 })
+
+const playButton = document.querySelector('#playButton')
+let play = false
+
+playButton.addEventListener('click', () => {
+    playButton.classList.toggle('play')
+    if (play) {
+        wavesurfer.pause()
+        play = false
+    } else {
+        wavesurfer.play()
+        play = true
+    }
+})
