@@ -1,6 +1,6 @@
 main {
     display: grid;
-    grid-template: auto 4fr 1fr 3fr / 5fr 3fr;
+    grid-template: auto 4fr auto 2fr / 5fr 3fr;
     gap: 20px;
     
     margin: 0 0 0 30px;
@@ -55,6 +55,8 @@ main {
 }
 
 .main__advertisement {
+    display: grid;
+    align-items: center;
     img {
         border-radius: 32px;
         box-shadow: 0 10px 20px #00000032;
@@ -101,6 +103,87 @@ main {
             p {
                 margin: 15px;
                 word-spacing: 2px;
+            }
+        }
+    }
+}
+
+.main__playlists {
+    .playlists__title {
+        margin: 20px 0;
+        font-size: 28px;
+        font-weight: 600;
+    }
+    .playlists__items {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        .playlists__item {
+            display: grid;
+            align-items: end;
+            // flex: 1 1 25%;
+            width: 140px;
+            height: 140px;
+            border-radius: 18px;
+
+            background-position: center;
+            background-size: cover;
+            background-repeat: no-repeat;
+
+            &:nth-child(1) {
+                background-image: url(../assets/imgs/tree.jpg);
+            }
+            &:nth-child(2) {
+                background-image: url(../assets/imgs/mist.jpg);
+            }
+            &:nth-child(3) {
+                background-image: url(../assets/imgs/mountains.jpg);
+            }
+            &:nth-child(4) {
+                background-image: url(../assets/imgs/river.jpg);
+            }
+
+            .playlists__info {
+                display: grid;
+                grid-template: 1fr 1fr / 1fr auto;
+                align-items: center;
+                gap: 5px;
+                
+                margin: 7px;
+                height: 35%;
+                border-radius: 20px;
+                background-color: #3f3f3fca;
+                color: #fff;
+                text-align: center;
+
+                .playlists__name {
+                    align-self: end;
+
+                    font-size: 11px;
+                    font-weight: 500;
+                }
+
+                .playlists__subname {
+                    align-self: start;
+
+                    font-size: 9px;
+                    word-spacing: 4px;
+                    color: #d8d8d8d9;
+                }
+
+                .playlists__button {
+                    grid-area: 1 / 2 / -1 / -1;
+
+                    display: grid;
+                    place-items: center;
+
+                    margin: 0 5px 0 0;
+                    height: 34px;
+                    width: 34px;
+                    border-radius: 50%;
+                    background-color: #fff;
+                    color: #b564d8;
+                }
             }
         }
     }
