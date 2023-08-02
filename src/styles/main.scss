@@ -1,6 +1,6 @@
 main {
     display: grid;
-    grid-template: auto 4fr auto 2fr / 5fr 3fr;
+    grid-template: auto 1fr auto auto / 5fr 3fr;
     gap: 20px;
     
     margin: 0 0 0 30px;
@@ -189,11 +189,53 @@ main {
     }
 }
 
+
+
 .main__audio-player {
     grid-area: 3 / 2 / span 2 / span 1;
 
     margin: 0 20px;
 
-    background-color: #0C134F;
+    background-color: #1d0a3e;
     border-radius: 40px;
+}
+
+.main__trending {
+    .trending__list {
+
+        max-height: 200px;
+        overflow: auto;
+        &::-webkit-scrollbar {
+            width: 16px;
+
+            // &-track {
+            //     background: #e8e8e8;
+            // }
+
+            &-thumb {
+                background-color: #555555;
+                border: 4px solid #ffffff;
+                border-radius: 10px;
+
+                &:hover {
+                    background-color: #303030;
+                }
+            }
+        }
+        ol {
+            li {
+                display: grid;
+                grid-template: 1fr / repeat(2, minmax(auto, 20px)) 1fr repeat(3, minmax(auto, 20px));
+                align-items: center;
+                
+                
+                img {
+                    width: 60px;
+                    height: 60px;
+                    object-fit: cover;
+                    border-radius: 20px;
+                }
+            }
+        }
+    }
 }
