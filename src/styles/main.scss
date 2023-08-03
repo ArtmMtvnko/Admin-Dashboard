@@ -189,18 +189,16 @@ main {
     }
 }
 
-
-
-.main__audio-player {
-    grid-area: 3 / 2 / span 2 / span 1;
-
-    margin: 0 20px;
-
-    background-color: #1d0a3e;
-    border-radius: 40px;
-}
-
 .main__trending {
+    position: relative;
+    &::after {
+        content: "";
+        position: absolute;
+        width: 100%;
+        height: 30px;
+        background: linear-gradient(transparent, #fff);
+        bottom: 0;
+    }
     .trending__list {
 
         max-height: 200px;
@@ -225,8 +223,10 @@ main {
         ol {
             li {
                 display: grid;
-                grid-template: 1fr / repeat(2, minmax(auto, 20px)) 1fr repeat(3, minmax(auto, 20px));
+                grid-template: 1fr / repeat(2, minmax(auto, 20px)) 1fr repeat(3, minmax(50px, auto));
                 align-items: center;
+
+                margin: 20px 0;
                 
                 
                 img {
@@ -235,6 +235,110 @@ main {
                     object-fit: cover;
                     border-radius: 20px;
                 }
+
+                .tranding__name {
+                    * {
+                        margin: 10px;
+                    }
+
+                    .name__title {
+                        font-weight: 600;
+                    }
+
+                    .name__subtitle {
+                        font-size: 12px;
+                        color: #797979;
+                    }
+                }
+
+                .trending__time {
+                    justify-self: center;
+                    
+                    font-size: 14px;
+                    font-weight: 600;
+                }
+
+                .trending__button {
+                    justify-self: center;
+                    
+                    display: grid;
+                    place-items: center;
+                    
+                    width: 30px;
+                    height: 30px;
+                    border-radius: 50%  ;
+                    background-color: #D4ADFC;
+                    color: #fff;
+                    font-size: 12px;
+                }
+
+                .trending__about {
+                    justify-self: center;
+
+                    i {
+                        color: #acacac;
+                    }
+                }
+            }
+        }
+    }
+}
+
+.main__audio-player {
+    grid-area: 3 / 2 / span 2 / span 1;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+
+    margin: 0 20px;
+    padding: 20px;
+
+    background-color: #1d0a3e;
+    border-radius: 28px;
+
+    img {
+        width: 100%;
+        height: 45%;
+        object-fit: cover;
+        border-radius: 32px;
+    }
+
+    .audio-player__title {
+        color: #fff;
+        font-size: 18px;
+        font-weight: 700;
+    }
+
+    .audio-player__tools {
+        display: grid;
+        grid-template: 1fr / 5fr 1fr 5fr;
+        justify-items: center;
+        align-items: center;
+
+        color: #fff;
+        font-size: 22px;
+
+        >i {
+            &:nth-child(1) {
+                transform: rotate(180deg);
+            }
+        }
+
+        .tools__button {
+            display: grid;
+            place-items: center;
+            
+            width: 50px;
+            height: 50px;
+            background-color: #fff;
+            border-radius: 50%;
+
+            color: #982fe8;
+
+            i {
+                transform: translateX(2px);
             }
         }
     }
