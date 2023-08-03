@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Admin-Dashboard</title>
+    <link rel="shortcut icon" href="assets/music.png" type="image/x-icon">
     <script src="https://kit.fontawesome.com/b078a5cdf5.js" crossorigin="anonymous"></script>
     <!-- <script src="https://unpkg.com/wavesurfer.js@7/dist/wavesurfer.min.js"></script> -->
 </head>
@@ -49,48 +50,239 @@
                 </nav>
                 <section class="aside__audio-player">
                     <div class="aside__audio-bar">
-                        <div id="waveform"></div>
+                        <div id="waveform" class="waveform"></div>
                     </div>
-                    <div class="aside__audio-player"></div>
+                    <div class="aside__audio-player">
+                        <div class="audio-player__title">
+                            <img src="assets/Saga_wrapper.jpg" alt="">
+                            <p>Vinland Saga 1st opening</p>
+                        </div>
+                        <div class="audio-player__tools">
+                            <div class="tools__wrap">
+                                <i class="fa fa-forward"></i><div class="tools__button" id="playButton">
+                                    <i class="fa fa-pause"></i><i class="fa fa-play"></i>
+                                </div><i class="fa fa-forward"></i>
+                            </div>
+                        </div>
+                    </div>
                 </section>
             </aside>
             <main>
                 <header class="main__header">
-                    <div class="header__title"></div>
-                    <div class="header__notification"></div>
-                    <div class="header__search-bar"></div>
+                    <div class="header__title">Home</div>
+                    <div class="search-bar__wrap">
+                        <img class="header__notification" src="assets/bell-regular.svg" alt="Bell">
+                        <div class="header__search-bar">
+                            <img class="header__magnifying-glass" src="assets/magnifying-glass-solid.svg" alt="">
+                            <input type="text" name="search-bar" placeholder="Type here to search">
+                        </div>
+                    </div>
                 </header>
-                <section class="main__advertising">
-
+                <section class="main__advertisement">
+                    <img src="assets/advertisement.png" alt="">
                 </section>
                 <section class="main__top-artists">
-                    <div class="top-artists__title"></div>
+                    <div class="top-artists__title">
+                        Top Artist
+                    </div>
                     <div class="top-artists__list">
-                        <div class="top-artists__item"></div>
+                        <div class="top-artists__item">
+                            <img src="assets/bob-marley.jpg" alt="">
+                            <div>
+                                <p class="item__title">Bob Marley</p>
+                                <p class="item__info">
+                                    <i class="fa fa-heart"></i>
+                                    1928 Followers ·
+                                    <i class="fa fa-wave-square"></i>
+                                    122M Plays</p>
+                            </div>
+                        </div>
+                        <div class="top-artists__item">
+                            <img src="assets/Elvis-Presley.jpg" alt="">
+                            <div>
+                                <p class="item__title">Elvis Presley</p>
+                                <p class="item__info">
+                                    <i class="fa fa-heart"></i>
+                                    1928 Followers ·
+                                    <i class="fa fa-wave-square"></i>
+                                    50M Plays</p>
+                            </div>
+                        </div>
+                        <div class="top-artists__item">
+                            <img src="assets/Michael-Jackson.jpg" alt="">
+                            <div>
+                                <p class="item__title">Michael Jackson</p>
+                                <p class="item__info">
+                                    <i class="fa fa-heart"></i>
+                                    1928 Followers ·
+                                    <i class="fa fa-wave-square"></i>
+                                    32M Plays</p>
+                            </div>
+                        </div>
                     </div>
                 </section>
                 <section class="main__playlists">
-                    <div class="playlists__title"></div>
+                    <div class="playlists__title">Playlist</div>
                     <div class="playlists__items">
-                        <div class="playlists__item"></div>
-                        <div class="playlists__item"></div>
-                        <div class="playlists__item"></div>
-                        <div class="playlists__item"></div>
+                        <div class="playlists__item">
+                            <div class="playlists__info">
+                                <div class="playlists__name">Music Pagi</div>
+                                <div class="playlists__subname">
+                                    <i class="fa fa-music"></i> 12 Tracks
+                                </div>
+                                <div class="playlists__button">
+                                    <i class="fa fa-play"></i>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="playlists__item">
+                            <div class="playlists__info">
+                                <div class="playlists__name">Music Anu</div>
+                                <div class="playlists__subname">
+                                    <i class="fa fa-music"></i> 22 Tracks
+                                </div>
+                                <div class="playlists__button">
+                                    <i class="fa fa-play"></i>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="playlists__item">
+                            <div class="playlists__info">
+                                <div class="playlists__name">Lofi Bass</div>
+                                <div class="playlists__subname">
+                                    <i class="fa fa-music"></i> 18 Tracks
+                                </div>
+                                <div class="playlists__button">
+                                    <div class="button__wrap">
+                                        <i class="fa fa-play"></i>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="playlists__item">
+                            <div class="playlists__info">
+                                <div class="playlists__name">Anak Senja</div>
+                                <div class="playlists__subname">
+                                    <i class="fa fa-music"></i> 25 Tracks
+                                </div>
+                                <div class="playlists__button">
+                                    <i class="fa fa-play"></i>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </section>
                 <section class="main__trending">
                     <div class="trending__title"></div>
                     <div class="trending__list">
-                        <div class="trinding__item"></div>
-                        <div class="trinding__item"></div>
-                        <div class="trinding__item"></div>
+                        <ol>
+                            <li class="trending__item">
+                                <div class="trending__number">1</div>
+                                <img src="assets/trending.jpg" alt="" class="trending__image">
+                                <div class="tranding__name">
+                                    <p class="name__title">I have no enemies</p>
+                                    <p class="name__subtitle">No one is my enemy</p>
+                                </div>
+                                <div class="trending__time">3:30</div>
+                                <div class="trending__button"><i class="fa fa-play"></i></div>
+                                <div class="trending__about">
+                                    <i class="fa fa-bars"></i>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="number">2</div>
+                                <img src="assets/trending.jpg" alt="" class="trending__image">
+                                <div class="tranding__name">
+                                    <p class="name__title">I have no enemies</p>
+                                    <p class="name__subtitle">No one is my enemy</p>
+                                </div>
+                                <div class="trending__time">3:30</div>
+                                <div class="trending__button"><i class="fa fa-play"></i></div>
+                                <div class="trending__about">
+                                    <i class="fa fa-bars"></i>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="number">3</div>
+                                <img src="assets/trending.jpg" alt="" class="trending__image">
+                                <div class="tranding__name">
+                                    <p class="name__title">I have no enemies</p>
+                                    <p class="name__subtitle">No one is my enemy</p>
+                                </div>
+                                <div class="trending__time">3:30</div>
+                                <div class="trending__button"><i class="fa fa-play"></i></div>
+                                <div class="trending__about">
+                                    <i class="fa fa-bars"></i>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="number">4</div>
+                                <img src="assets/trending.jpg" alt="" class="trending__image">
+                                <div class="tranding__name">
+                                    <p class="name__title">I have no enemies</p>
+                                    <p class="name__subtitle">No one is my enemy</p>
+                                </div>
+                                <div class="trending__time">3:30</div>
+                                <div class="trending__button"><i class="fa fa-play"></i></div>
+                                <div class="trending__about">
+                                    <i class="fa fa-bars"></i>
+                                </div>
+                            </li>
+                            <li class="trending__item">
+                                <div class="trending__number">5</div>
+                                <img src="assets/trending.jpg" alt="" class="trending__image">
+                                <div class="tranding__name">
+                                    <p class="name__title">I have no enemies</p>
+                                    <p class="name__subtitle">No one is my enemy</p>
+                                </div>
+                                <div class="trending__time">3:30</div>
+                                <div class="trending__button"><i class="fa fa-play"></i></div>
+                                <div class="trending__about">
+                                    <i class="fa fa-bars"></i>
+                                </div>
+                            </li>
+                            <li class="trending__item">
+                                <div class="trending__number">6</div>
+                                <img src="assets/trending.jpg" alt="" class="trending__image">
+                                <div class="tranding__name">
+                                    <p class="name__title">I have no enemies</p>
+                                    <p class="name__subtitle">No one is my enemy</p>
+                                </div>
+                                <div class="trending__time">3:30</div>
+                                <div class="trending__button"><i class="fa fa-play"></i></div>
+                                <div class="trending__about">
+                                    <i class="fa fa-bars"></i>
+                                </div>
+                            </li>
+                            <li class="trending__item">
+                                <div class="trending__number">7</div>
+                                <img src="assets/trending.jpg" alt="" class="trending__image">
+                                <div class="tranding__name">
+                                    <p class="name__title">I have no enemies</p>
+                                    <p class="name__subtitle">No one is my enemy</p>
+                                </div>
+                                <div class="trending__time">3:30</div>
+                                <div class="trending__button"><i class="fa fa-play"></i></div>
+                                <div class="trending__about">
+                                    <i class="fa fa-bars"></i>
+                                </div>
+                            </li>
+                        </ol>
                     </div>
                 </section>
                 <section class="main__audio-player">
-                    <div class="audio-player__body"></div>
+                    <img src="assets/Saga_wrapper.jpg" alt="">
+                    <p class="audio-player__title">Vinland Sada 1st opening</p>
+                    <div class="audio-player__tools">
+                        <i class="fa fa-forward"></i>
+                        <div class="tools__button">
+                            <i class="fa fa-play"></i>
+                        </div>
+                        <i class="fa fa-forward"></i>
+                    </div>
                 </section>
             </main>
         </div>
     </div>
-<script defer src="bundle6909cd0005b1edadf2ea.js"></script></body>
+<script defer src="bundle5c1a3eae6cbc50f02c29.js"></script></body>
 </html>
